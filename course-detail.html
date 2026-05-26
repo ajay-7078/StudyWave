@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Details | StudyWave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">SW</span>
+        <span>StudyWave</span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#courses" class="nav-link">Courses</a>
+        <a href="index.html#categories" class="nav-link">Categories</a>
+        <a href="index.html#reviews" class="nav-link">Reviews</a>
+        <a href="index.html#newsletter" class="nav-link">Subscribe</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary" id="loginBtn">Login</button>
+        <button class="btn btn-primary">Signup</button>
+        <button class="icon-btn mobile-toggle" id="mobileToggle" aria-label="Open menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="course-detail-page">
+    <!-- Hero Section -->
+    <section class="course-hero" id="courseHero">
+      <div class="container hero-content">
+        <div class="hero-left fade-up" data-delay="0.1s">
+          <div class="breadcrumb">
+            <a href="index.html">Courses</a>
+            <span>/</span>
+            <span id="breadcrumbTitle">Course Title</span>
+          </div>
+          <h1 id="courseTitle">Course Title</h1>
+          <p id="courseDescription">Course description here</p>
+          
+          <div class="course-meta-detail">
+            <span id="courseRating">4.8 ★</span>
+            <span id="courseReviews">(2,340 reviews)</span>
+            <span id="courseStudents">25k+ students</span>
+          </div>
+
+          <div class="instructor-card">
+            <div class="instructor-avatar" id="instructorImage">SJ</div>
+            <div>
+              <p>Instructor</p>
+              <h4 id="instructorName">Sarah Johnson</h4>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn btn-primary btn-large" id="enrollBtn">Enroll Now</button>
+            <button class="btn btn-secondary btn-large">Share Course</button>
+          </div>
+        </div>
+
+        <div class="hero-right fade-up" data-delay="0.2s">
+          <div class="course-hero-visual" id="courseImage"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Content Section -->
+    <section class="course-content">
+      <div class="container">
+        <div class="content-grid">
+          <!-- Main Content -->
+          <div class="main-content">
+            <!-- Overview -->
+            <div class="section-block fade-up" data-delay="0.1s">
+              <h2>Course Overview</h2>
+              <p id="courseOverview">Overview text here</p>
+            </div>
+
+            <!-- What You'll Learn -->
+            <div class="section-block fade-up" data-delay="0.12s">
+              <h2>What You'll Learn</h2>
+              <div class="learn-list" id="whatYouLearn">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Curriculum -->
+            <div class="section-block fade-up" data-delay="0.14s">
+              <h2>Course Curriculum</h2>
+              <div class="curriculum-list" id="curriculumList">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Requirements -->
+            <div class="section-block fade-up" data-delay="0.16s">
+              <h2>Requirements</h2>
+              <ul class="requirements-list" id="requirementsList">
+                <!-- Populated by JS -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="course-sidebar fade-up" data-delay="0.15s">
+            <div class="course-card-detail">
+              <div class="course-thumbnail" id="sidebarImage"></div>
+              
+              <div class="price-section">
+                <p class="price-label">Price</p>
+                <h3 class="price" id="coursePrice">₹10,578</h3>
+              </div>
+
+              <button class="btn btn-primary btn-block" id="enrollBtnSidebar">Enroll Now</button>
+              <button class="btn btn-outline btn-block">Add to Wishlist</button>
+
+              <div class="course-info-box">
+                <div class="info-item">
+                  <span>📚</span>
+                  <div>
+                    <p>Duration</p>
+                    <h4 id="courseDuration">8 weeks</h4>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span>🎯</span>
+                  <div>
+                    <p>Level</p>
+                    <h4 id="courseLevel">Intermediate</h4>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span>🌍</span>
+                  <div>
+                    <p>Language</p>
+                    <h4 id="courseLanguage">English</h4>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <span>👥</span>
+                  <div>
+                    <p>Students</p>
+                    <h4 id="courseStudentsCount">25k+</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="course-highlights" id="highlightsList">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-page-section">
+      <div class="container">
+        <h2>Student Reviews</h2>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="student-avatar">AM</div>
+            <div>
+              <h3>Amy Mitchell</h3>
+              <p>"Excellent course! The instructor explains everything clearly and the projects are practical."</p>
+              <span>★★★★★</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="student-avatar">JK</div>
+            <div>
+              <h3>Jae Kim</h3>
+              <p>"Best learning experience. Hands-on approach helped me understand concepts better."</p>
+              <span>★★★★☆</span>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="student-avatar">CC</div>
+            <div>
+              <h3>Carla Cruz</h3>
+              <p>"Great value for money. The support team is responsive and helpful."</p>
+              <span>★★★★★</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- Popup Message Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand">StudyWave</a>
+        <p>Online courses for the next generation of professionals.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#courses">Courses</a>
+        <a href="index.html#categories">Categories</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@studywave.com</p>
+        <p>+1 (555) 345-6789</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 StudyWave. Crafted for modern learners.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="course-detail.js"></script>
+</body>
+</html>

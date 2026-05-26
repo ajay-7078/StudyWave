@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyWave | Online Learning Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Preloader animation -->
+  <div class="loader-overlay" id="loaderOverlay">
+    <div class="loader-ring"></div>
+    <p>Loading StudyWave...</p>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">SW</span>
+        <span>StudyWave</span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#categories" class="nav-link">Categories</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#newsletter" class="nav-link">Subscribe</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary" id="loginBtn">Login</button>
+        <button class="btn btn-primary">Signup</button>
+        <button class="icon-btn mobile-toggle" id="mobileToggle" aria-label="Open menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-up" data-delay="0.1s">
+          <span class="eyebrow">Learn at your pace</span>
+          <h1>Grow your skills with expert-led courses for the career you want.</h1>
+          <p id="welcomeText">Welcome back! Discover the best path for your next milestone.</p>
+          <div class="hero-actions">
+            <a href="#courses" class="btn btn-primary btn-large">Browse Courses</a>
+            <a href="#newsletter" class="btn btn-secondary btn-large">Join Newsletter</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>4.9/5</strong>
+              <span>Trusted Reviews</span>
+            </div>
+            <div>
+              <strong>25k+</strong>
+              <span>Students Enrolled</span>
+            </div>
+            <div>
+              <strong>120+</strong>
+              <span>Expert Instructors</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-up" data-delay="0.3s">
+          <div class="hero-card hero-card-top">
+            <h3>JavaScript Mastery</h3>
+            <p>Interactive course with real projects.</p>
+          </div>
+          <div class="hero-image">
+            <div class="hero-device"></div>
+            <div class="hero-screen"></div>
+            <div class="hero-glow hero-glow-left"></div>
+            <div class="hero-glow hero-glow-right"></div>
+          </div>
+          <div class="hero-card hero-card-bottom">
+            <h3>UI/UX Design Bootcamp</h3>
+            <p>Design modern user experiences with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+      <div class="container search-card fade-up" data-delay="0.1s">
+        <div>
+          <h2>Find the perfect course</h2>
+          <p>Search free and premium classes with one quick search.</p>
+        </div>
+        <div class="search-input-group">
+          <input type="search" id="courseSearch" placeholder="Search courses, topics, or instructors..." />
+          <button class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section class="section" id="courses">
+      <div class="container section-header fade-up" data-delay="0.1s">
+        <span class="eyebrow">Popular Courses</span>
+        <h2>Courses designed to help you succeed.</h2>
+        <p>Explore curated learning paths and enroll in top-rated programs.</p>
+      </div>
+      <div class="courses-grid" id="courseGrid">
+        <article class="course-card fade-up" data-search="web development javascript react" data-delay="0.15s">
+          <div class="course-thumb web-dev"></div>
+          <div class="course-body">
+            <h3>Fullstack Web Development</h3>
+            <p>Build responsive websites, APIs, and deploy real applications.</p>
+            <div class="course-meta">
+              <span>₹10,578</span>
+              <span>★★★★☆</span>
+            </div>
+            <button class="btn btn-outline enroll-btn" data-course="fullstack-web">Enroll Now</button>
+          </div>
+        </article>
+
+        <article class="course-card fade-up" data-search="app development flutter ios android" data-delay="0.18s">
+          <div class="course-thumb app-dev"></div>
+          <div class="course-body">
+            <h3>Mobile App Development</h3>
+            <p>Create stunning Android and iOS apps with modern tools.</p>
+            <div class="course-meta">
+              <span>₹8,118</span>
+              <span>★★★★★</span>
+            </div>
+            <button class="btn btn-outline enroll-btn" data-course="mobile-app">Enroll Now</button>
+          </div>
+        </article>
+
+        <article class="course-card fade-up" data-search="data science python machine learning" data-delay="0.21s">
+          <div class="course-thumb data-science"></div>
+          <div class="course-body">
+            <h3>Data Science & Analytics</h3>
+            <p>Analyze real datasets and build predictive machine learning models.</p>
+            <div class="course-meta">
+              <span>₹9,758</span>
+              <span>★★★★☆</span>
+            </div>
+            <button class="btn btn-outline enroll-btn" data-course="data-science">Enroll Now</button>
+          </div>
+        </article>
+
+        <article class="course-card fade-up" data-search="ai machine learning python" data-delay="0.24s">
+          <div class="course-thumb ai"></div>
+          <div class="course-body">
+            <h3>AI & Machine Learning</h3>
+            <p>Master neural networks, deep learning, and intelligent systems.</p>
+            <div class="course-meta">
+              <span>₹11,398</span>
+              <span>★★★★★</span>
+            </div>
+            <button class="btn btn-outline enroll-btn" data-course="ai-ml">Enroll Now</button>
+          </div>
+        </article>
+
+        <article class="course-card fade-up" data-search="ui ux design figma prototyping" data-delay="0.27s">
+          <div class="course-thumb ui-ux"></div>
+          <div class="course-body">
+            <h3>UI/UX Design Essentials</h3>
+            <p>Learn design systems, prototyping, and polished user interfaces.</p>
+            <div class="course-meta">
+              <span>₹7,298</span>
+              <span>★★★★☆</span>
+            </div>
+            <button class="btn btn-outline enroll-btn" data-course="ui-ux">Enroll Now</button>
+          </div>
+        </article>
+
+        <article class="course-card fade-up" data-search="cyber security network hacking" data-delay="0.30s">
+          <div class="course-thumb cyber"></div>
+          <div class="course-body">
+            <h3>Cyber Security Fundamentals</h3>
+            <p>Protect networks, identify vulnerabilities, and secure digital assets.</p>
+            <div class="course-meta">
+              <span>₹8,938</span>
+              <span>★★★★☆</span>
+            </div>
+            <button class="btn btn-outline enroll-btn" data-course="cyber-security">Enroll Now</button>
+          </div>
+        </article>
+      </div>
+      <div class="pagination-controls fade-up" id="paginationControls"></div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section alt-bg" id="categories">
+      <div class="container section-header fade-up" data-delay="0.1s">
+        <span class="eyebrow">Course Categories</span>
+        <h2>Explore learning paths across trending fields.</h2>
+      </div>
+      <div class="bento-grid categories-bento fade-up" data-delay="0.12s">
+        <div class="bento-card">
+          <div class="bento-icon">💻</div>
+          <div class="bento-body">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, React, and backend APIs.</p>
+          </div>
+          <div class="bento-badge">Popular</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">📱</div>
+          <div class="bento-body">
+            <h3>App Development</h3>
+            <p>Cross-platform apps, native experiences, and deployment.</p>
+          </div>
+          <div class="bento-badge">Mobile</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">📊</div>
+          <div class="bento-body">
+            <h3>Data Science</h3>
+            <p>Python analytics, visualization and statistical modeling.</p>
+          </div>
+          <div class="bento-badge">Insights</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">🤖</div>
+          <div class="bento-body">
+            <h3>AI & Machine Learning</h3>
+            <p>Deep learning, neural networks, and intelligent systems.</p>
+          </div>
+          <div class="bento-badge">AI</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">🎨</div>
+          <div class="bento-body">
+            <h3>UI/UX Design</h3>
+            <p>Wireframing, prototyping, and modern interfaces.</p>
+          </div>
+          <div class="bento-badge">Design</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">🛡️</div>
+          <div class="bento-body">
+            <h3>Cyber Security</h3>
+            <p>Threat detection, privacy, and secure architecture.</p>
+          </div>
+          <div class="bento-badge">Secure</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container section-header fade-up" data-delay="0.1s">
+        <span class="eyebrow">Platform Features</span>
+        <h2>Everything you need for learning and growth.</h2>
+      </div>
+      <div class="bento-grid fade-up" data-delay="0.14s">
+        <div class="bento-card">
+          <div class="bento-icon">▶️</div>
+          <div class="bento-body">
+            <h3>Video Lectures</h3>
+            <p>Learn through rich videos and guided tutorials.</p>
+          </div>
+          <div class="bento-badge">On-demand</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">📜</div>
+          <div class="bento-body">
+            <h3>Certificates</h3>
+            <p>Earn certificates to showcase your achievement.</p>
+          </div>
+          <div class="bento-badge">Verified</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">👩‍🏫</div>
+          <div class="bento-body">
+            <h3>Expert Instructors</h3>
+            <p>Learn from industry professionals and mentors.</p>
+          </div>
+          <div class="bento-badge">Top Rated</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">♾️</div>
+          <div class="bento-body">
+            <h3>Lifetime Access</h3>
+            <p>Return anytime to review course materials.</p>
+          </div>
+          <div class="bento-badge">Forever</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">🎯</div>
+          <div class="bento-body">
+            <h3>Career Guidance</h3>
+            <p>Receive support to plan your next job or promotion.</p>
+          </div>
+          <div class="bento-badge">Career</div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon">🧩</div>
+          <div class="bento-body">
+            <h3>Projects & Assignments</h3>
+            <p>Practice with real-world challenges and tasks.</p>
+          </div>
+          <div class="bento-badge">Practice</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section alt-bg" id="reviews">
+      <div class="container section-header fade-up" data-delay="0.1s">
+        <span class="eyebrow">Student Reviews</span>
+        <h2>Students love the practical learning experience.</h2>
+      </div>
+      <div class="reviews-grid fade-up" data-delay="0.16s">
+        <article class="review-card">
+          <div class="student-avatar">AM</div>
+          <div>
+            <h3>Amy Mitchell</h3>
+            <p>"The projects were clear, engaging, and helped me land a new role."</p>
+            <span>★★★★★</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="student-avatar">JK</div>
+          <div>
+            <h3>Jae Kim</h3>
+            <p>"I loved the hands-on exercises and guidance from expert instructors."</p>
+            <span>★★★★☆</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="student-avatar">CC</div>
+          <div>
+            <h3>Carla Cruz</h3>
+            <p>"The secure learning platform made it easy to stay motivated every day."</p>
+            <span>★★★★★</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section stats-section" id="stats">
+      <div class="container stats-grid fade-up" data-delay="0.1s">
+        <div class="stat-card">
+          <h3><span class="counter" data-target="25000">0</span>+</h3>
+          <p>Total Students</p>
+        </div>
+        <div class="stat-card">
+          <h3><span class="counter" data-target="120">0</span>+</h3>
+          <p>Courses</p>
+        </div>
+        <div class="stat-card">
+          <h3><span class="counter" data-target="45">0</span>+</h3>
+          <p>Instructors</p>
+        </div>
+        <div class="stat-card">
+          <h3><span class="counter" data-target="98">0</span>%</h3>
+          <p>Career Placements</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-card fade-up" data-delay="0.1s">
+        <div>
+          <span class="eyebrow">Stay updated</span>
+          <h2>Subscribe to get the latest learning deals.</h2>
+          <p>Receive course recommendations, new launches, and special offers.</p>
+        </div>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <!-- Popup Message Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand footer-brand">StudyWave</a>
+        <p>Online courses for the next generation of professionals.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#courses">Courses</a>
+        <a href="#categories">Categories</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@studywave.com</p>
+        <p>+1 (555) 345-6789</p>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 StudyWave. Crafted for modern learners.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
