@@ -1305,6 +1305,8 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .review-card {
